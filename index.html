@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. K P Ashraf - Pediatric Consultation Schedule & Appointments | Kannur</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284c7',
+                            teal: '#0d9488',
+                            orange: '#f97316',
+                            coral: '#ef4444',
+                            light: '#f0f9ff',
+                            dark: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1), 0 8px 10px -6px rgba(14, 165, 233, 0.05);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #fff7ed 100%);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER / BRANDING -->
+    <header class="bg-white shadow-sm border-b border-slate-100 sticky top-0 z-30">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-sky-500 to-teal-400 text-white rounded-full p-2.5 shadow-md">
+                    <i class="fa-solid fa-user-doctor text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-slate-900 leading-tight">Dr. K P Ashraf</h1>
+                    <p class="text-xs sm:text-sm font-medium text-sky-600">MBBS MD (Pediatrics)</p>
+                </div>
+            </div>
+            <a href="tel:04972715550" class="hidden sm:inline-flex items-center gap-2 bg-sky-50 hover:bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold transition">
+                <i class="fa-solid fa-phone">="text-sky-600"></i> Emergency Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient py-8 px-4 border-b border-sky-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block bg-sky-100 text-sky-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                Consulting Schedule
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-3">
+                Pediatric Outpatient Consultations
+            </h2>
+            <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base mb-6">
+                Available for consultations across four prime hospital & clinic locations in <span class="font-semibold text-slate-800">Kannur</span>. Select a location below to call or request an appointment.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#locations" class="bg-sky-600 hover:bg-sky-700 text-white font-medium px-5 py-2.5 rounded-xl text-sm shadow-md transition flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i> View Timings
+                </a>
+                <button onclick="openBookingModal()" class="bg-teal-600 hover:bg-teal-700 text-white font-medium px-5 py-2.5 rounded-xl text-sm shadow-md transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Quick WhatsApp Booking
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATIONS GRID -->
+    <main id="locations" class="max-w-4xl mx-auto px-4 py-8 flex-grow">
+        <div class="text-center mb-6">
+            <h3 class="text-xl font-bold text-slate-900">Choose Consultation Location</h3>
+            <p class="text-xs text-slate-500">Click phone number to dial directly or book online</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Location 1: KIMS Sreechand Hospital -->
+            <div class="bg-white rounded-2xl border-2 border-sky-200 p-5 card-shadow transition hover:border-sky-400 relative flex flex-col justify-between">
+                <div>
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-sky-100 text-sky-600 p-3 rounded-xl">
+                                <i class="fa-solid fa-hospital text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg leading-snug">KIMS Sreechand Hospital</h4>
+                                <p class="text-xs text-slate-500 font-medium">Kannur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-sky-50 rounded-xl p-3 my-3">
+                        <div class="flex items-center text-sky-900 text-sm font-semibold">
+                            <i class="fa-regular fa-clock text-sky-600 mr-2"></i> 07:30 AM – 01:30 PM
+                        </div>
+                        <p class="text-xs text-sky-700 mt-1">Morning Consultation Slot</p>
+                    </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                    <a href="tel:04972715550" class="w-full bg-sky-600 hover:bg-sky-700 text-white text-center py-2.5 rounded-xl font-semibold text-sm transition flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-phone"></i> Call 0497 2715550
+                    </a>
+                    <button onclick="openBookingModal('KIMS Sreechand Hospital, Kannur')" class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 text-center py-2 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1 border border-slate-200">
+                        <i class="fa-brands fa-whatsapp text-emerald-600"></i> Request WhatsApp Booking
+                    </button>
+                </div>
+            </div>
+
+            <!-- Location 2: Fathima Hospital -->
+            <div class="bg-white rounded-2xl border-2 border-teal-200 p-5 card-shadow transition hover:border-teal-400 relative flex flex-col justify-between">
+                <div>
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-teal-100 text-teal-600 p-3 rounded-xl">
+                                <i class="fa-solid fa-hospital-user text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg leading-snug">Fathima Hospital</h4>
+                                <p class="text-xs text-slate-500 font-medium">Kannur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-teal-50 rounded-xl p-3 my-3">
+                        <div class="flex items-center text-teal-900 text-sm font-semibold">
+                            <i class="fa-regular fa-clock text-teal-600 mr-2"></i> 02:30 PM – 04:30 PM
+                        </div>
+                        <p class="text-xs text-teal-700 mt-1">Afternoon Consultation Slot</p>
+                    </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                    <a href="tel:6262888000" class="w-full bg-teal-600 hover:bg-teal-700 text-white text-center py-2.5 rounded-xl font-semibold text-sm transition flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-phone"></i> Call 62628 88000
+                    </a>
+                    <button onclick="openBookingModal('Fathima Hospital, Kannur')" class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 text-center py-2 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1 border border-slate-200">
+                        <i class="fa-brands fa-whatsapp text-emerald-600"></i> Request WhatsApp Booking
+                    </button>
+                </div>
+            </div>
+
+            <!-- Location 3: Medister Specialist Clinics -->
+            <div class="bg-white rounded-2xl border-2 border-amber-200 p-5 card-shadow transition hover:border-amber-400 relative flex flex-col justify-between">
+                <div>
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-amber-100 text-amber-600 p-3 rounded-xl">
+                                <i class="fa-solid fa-clinic-medical text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg leading-snug">Medister Specialist Clinics</h4>
+                                <p class="text-xs text-slate-500 font-medium">Varam, Kannur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 rounded-xl p-3 my-3">
+                        <div class="flex items-center text-amber-900 text-sm font-semibold">
+                            <i class="fa-regular fa-clock text-amber-600 mr-2"></i> 04:30 PM – 07:30 PM
+                        </div>
+                        <p class="text-xs text-amber-800 font-semibold mt-1">
+                            <i class="fa-solid fa-circle-info mr-1 text-amber-600"></i> Booking starts after 10:30 AM
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                    <a href="tel:8281292177" class="w-full bg-amber-600 hover:bg-amber-700 text-white text-center py-2.5 rounded-xl font-semibold text-sm transition flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-phone"></i> Call 82812 92177
+                    </a>
+                    <button onclick="openBookingModal('Medister Specialist Clinics, Varam')" class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 text-center py-2 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1 border border-slate-200">
+                        <i class="fa-brands fa-whatsapp text-emerald-600"></i> Request WhatsApp Booking
+                    </button>
+                </div>
+            </div>
+
+            <!-- Location 4: Crescent Hospital -->
+            <div class="bg-white rounded-2xl border-2 border-rose-200 p-5 card-shadow transition hover:border-rose-400 relative flex flex-col justify-between">
+                <div>
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-rose-100 text-rose-600 p-3 rounded-xl">
+                                <i class="fa-solid fa-hospital-symbol text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg leading-snug">Crescent Hospital</h4>
+                                <p class="text-xs text-slate-500 font-medium">Thana, Kannur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-rose-50 rounded-xl p-3 my-3">
+                        <div class="flex items-center text-rose-900 text-sm font-semibold">
+                            <i class="fa-regular fa-clock text-rose-600 mr-2"></i> 07:30 PM – 08:30 PM
+                        </div>
+                        <p class="text-xs text-rose-700 mt-1">Evening Consultation Slot</p>
+                    </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                    <a href="tel:7907608759" class="w-full bg-rose-600 hover:bg-rose-700 text-white text-center py-2.5 rounded-xl font-semibold text-sm transition flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-phone"></i> Call 79076 08759
+                    </a>
+                    <button onclick="openBookingModal('Crescent Hospital, Thana, Kannur')" class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 text-center py-2 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1 border border-slate-200">
+                        <i class="fa-brands fa-whatsapp text-emerald-600"></i> Request WhatsApp Booking
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- IMPORTANT NOTE BOX -->
+        <div class="mt-8 bg-sky-50 border border-sky-200 rounded-2xl p-4 text-center">
+            <p class="text-sm text-sky-900 font-medium">
+                <i class="fa-solid fa-circle-info text-sky-600 mr-1"></i> <strong>For Bookings & Appointments:</strong> Please contact the respective Hospitals/Clinics directly using the call buttons above.
+            </p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-6 px-4 text-center text-xs">
+        <div class="max-w-4xl mx-auto space-y-2">
+            <p class="font-semibold text-slate-200 text-sm">Dr. K P Ashraf | MBBS MD (Pediatrics)</p>
+            <p>Specialized Pediatric & Child Healthcare Services in Kannur</p>
+            <p class="text-slate-500 pt-2 border-t border-slate-800">
+                &copy; <span id="year"></span> Dr. K P Ashraf. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- BOOKING MODAL -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Schedule Patient Appointment</h3>
+            <p class="text-xs text-slate-500 mb-4">Fill out the details below to generate a pre-formatted WhatsApp booking message.</p>
+            
+            <form id="whatsappForm" onsubmit="sendWhatsApp(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Patient (Child) Name *</label>
+                    <input type="text" id="patientName" required placeholder="Enter child's full name" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Age & Gender</label>
+                    <input type="text" id="patientAge" placeholder="e.g. 5 yrs, Male" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Preferred Location *</label>
+                    <select id="preferredLocation" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        <option value="KIMS Sreechand Hospital, Kannur">KIMS Sreechand Hospital (07:30 AM - 01:30 PM)</option>
+                        <option value="Fathima Hospital, Kannur">Fathima Hospital (02:30 PM - 04:30 PM)</option>
+                        <option value="Medister Specialist Clinics, Varam">Medister Specialist Clinics (04:30 PM - 07:30 PM)</option>
+                        <option value="Crescent Hospital, Thana, Kannur">Crescent Hospital (07:30 PM - 08:30 PM)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Preferred Date</label>
+                    <input type="date" id="preferredDate" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                </div>
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Continue to WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Modal Controllers
+        function openBookingModal(locationName = '') {
+            if (locationName) {
+                document.getElementById('preferredLocation').value = locationName;
+            }
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        // WhatsApp Form Handling
+        function sendWhatsApp(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('patientName').value;
+            const age = document.getElementById('patientAge').value || 'Not specified';
+            const location = document.getElementById('preferredLocation').value;
+            const date = document.getElementById('preferredDate').value || 'Earliest Available';
+
+            const text = `Hello Doctor / Hospital Reception,%0A%0A*Appointment Request for Dr. K P Ashraf (Pediatrics)*%0A%0A• *Patient Name:* ${encodeURIComponent(name)}%0A• *Age/Gender:* ${encodeURIComponent(age)}%0A• *Location:* ${encodeURIComponent(location)}%0A• *Preferred Date:* ${encodeURIComponent(date)}%0A%0APlease confirm slot availability. Thank you!`;
+
+            // Number mapped to default clinic or doctor consultation receptionist
+            const defaultPhone = "918281292177"; 
+            window.open(`https://wa.me/${defaultPhone}?text=${text}`, '_blank');
+            closeBookingModal();
+        }
+    </script>
+</body>
+</html>
